@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Vision - Logs & Queries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cat Vision Motion Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="logs.html" class="active">Logs & Queries</a></li>
+                <li><a href="heatmap.html">Heatmap</a></li>
+                <li><a href="reports.html">AI-Generated Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="logs">
+            <h2>Cat Activity Logs</h2>
+            
+            <div class="search-container">
+                <input type="text" id="log-search" placeholder="Search logs...">
+            </div>
+            
+            <div class="table-container">
+                <table id="logs-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Activity</th>
+                            <th>Zone</th>
+                            <th>Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logs-body">
+                        <!-- Table rows dynamically inserted here  -->
+                        <tr>
+                            <td colspan="4">Loading logs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cat Vision Project - Group 24</p>
+    </footer>
+
+    <script src="logs.js"></script>
+</body>
+</html>

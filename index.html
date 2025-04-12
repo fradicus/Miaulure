@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Vision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cat Vision Motion Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="logs.html">Logs & Queries</a></li>
+                <li><a href="heatmap.html">Heatmap</a></li>
+                <li><a href="reports.html">AI-Generated Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Cat Activity Dashboard</h2>
+            
+            <div class="activity-summary">
+                <!-- Activity cards dynamically inserted here -->
+                <div class="activity-card">
+                    <h3>Loading...</h3>
+                    <p class="count">0</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Hourly Activity</h3>
+                <canvas id="activity-chart"></canvas>
+            </div>
+            
+            <div class="behavior-summary">
+                <h3>Behavior Summary</h3>
+                <div id="behavior-text">Loading behavior analysis...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cat Vision Project - Group 24</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

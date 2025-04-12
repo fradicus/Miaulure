@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Vision - Heatmap</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cat Vision Motion Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="logs.html">Logs & Queries</a></li>
+                <li><a href="heatmap.html" class="active">Heatmap</a></li>
+                <li><a href="reports.html">AI-Generated Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="heatmap">
+            <h2>Activity Heatmap</h2>
+            
+            <div class="heatmap-container">
+                <div id="heatmap-visual">
+                    <div class="loading-message">Loading heatmap data...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cat Vision Project - Group 24</p>
+    </footer>
+
+    <script src="heatmap.js"></script>
+</body>
+</html>

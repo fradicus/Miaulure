@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Vision - AI Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .report-box p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .report-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-box h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .report-box ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .report-navigation {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .report-selector-container {
+            flex-grow: 1;
+        }
+
+        #report-selector {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .nav-button {
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 80px;
+        }
+
+        .nav-button:hover {
+            background-color: #2980b9;
+        }
+
+        .nav-button.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .report-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cat Vision Motion Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="logs.html">Logs & Queries</a></li>
+                <li><a href="heatmap.html">Heatmap</a></li>
+                <li><a href="reports.html" class="active">AI-Generated Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ai-reports">
+            <h2>AI-Generated Activity Reports</h2>
+
+            <div class="report-navigation">
+                <button id="prev-report" class="nav-button disabled" disabled>Previous</button>
+                <div class="report-selector-container">
+                    <select id="report-selector">
+                        <option value="0">Loading reports...</option>
+                    </select>
+                </div>
+                <button id="next-report" class="nav-button">Next</button>
+            </div>
+
+            <div class="report-actions">
+                <button id="refresh-report" class="btn">Refresh Reports</button>
+                <button id="download-pdf" class="btn">Download as Text</button>
+            </div>
+
+            <div class="report-container">
+                <div id="report-content" class="report-box">
+                    <p>Loading AI-generated report...</p>
+                </div>
+            </div>
+
+            <div class="report-metadata">
+                <p>Last updated: <span id="last-updated">Never</span></p>
+                <p>Analysis date: <span id="analysis-period">Unknown</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cat Vision Project - Group 24</p>
+    </footer>
+
+    <script src="reports.js"></script>
+</body>
+
+</html>
